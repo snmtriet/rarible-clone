@@ -1,0 +1,80 @@
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    'subscribe subscribe'
+    'marketplace links'
+    'socials .';
+  padding: 24px 0px;
+  grid-column-gap: 16px;
+  grid-row-gap: 32px;
+}
+
+.foot-subscribe {
+  grid-area: subscribe;
+}
+
+.foot-form {
+  @apply relative;
+}
+
+.foot-form span {
+  @apply font-medium leading-7 text-[22px];
+}
+
+.foot-form .input-wrapper {
+  @apply min-h-[54px];
+}
+
+.foot-form .input-wrapper input {
+  @apply bg-transparent border-0 text-dark/80 dark:text-light/80 outline-none text-[15px] p-0 overflow-hidden w-full;
+}
+
+.foot-form .input-wrapper .arrow-icon {
+  @apply cursor-auto flex flex-col;
+}
+
+.foot-form .input-wrapper .arrow-icon button {
+  @apply flex items-center justify-center text-dark/85 transition-all ease-in-out w-8 h-8 bg-transparent border-none cursor-pointer;
+}
+
+.foot-form .input-wrapper .arrow-icon button svg {
+  @apply rotate-[270deg] text-dark dark:text-light;
+}
+
+.foot-marketplace {
+  grid-area: marketplace;
+}
+
+.footer h3 {
+  @apply font-medium leading-7 text-[22px];
+}
+
+.footer .foot-link {
+  @apply mb-[12px] transition-all ease-in-out no-underline text-dark/60 dark:text-light/60 truncate font-medium leading-[22px] text-[15px] max-w-full hover:text-dark/90 dark:hover:text-light/90;
+}
+
+.foot-links {
+  grid-area: links;
+}
+
+.foot-socials {
+  grid-area: socials;
+}
+
+@media (min-width: 420px) {
+  .footer-top {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      'subscribe subscribe subscribe'
+      'marketplace links socials';
+  }
+}
+
+@media (min-width: 1080px) {
+  .footer-top {
+    grid-template: 'subscribe marketplace links socials' 1fr / 5fr 3fr 3fr 3fr;
+    column-gap: 48px;
+  }
+}

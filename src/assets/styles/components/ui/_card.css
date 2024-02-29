@@ -1,0 +1,69 @@
+.card-nft {
+  @apply flex flex-col transition-all duration-[0.15s] ease-[ease-in-out] delay-[0s] will-change-transform border p-2 rounded-2xl border-solid border-dark/[0.08] dark:border-light/[0.08] bg-transparent;
+}
+
+.card-nft:hover {
+  @apply transition-all duration-[0.15s] ease-[ease-in-out] delay-[0s] will-change-transform translate-y-[-3px] cursor-pointer shadow-[rgba(22,22,26,0.08)_0px_0px_0px_2px_inset] dark:shadow-[rgba(255,255,255,0.08)_0px_0px_0px_2px_inset];
+}
+
+.card-nft:hover .card-image .image-wrapper .action-hidden {
+  @apply opacity-100;
+}
+.card-nft:hover .card-image .image-wrapper .button-wrapper {
+  @apply -translate-x-2/4 translate-y-0 opacity-100 scale-100;
+}
+
+.card-image {
+  @apply relative overflow-hidden w-full pb-[100%] rounded-lg bg-dark/5 dark:bg-light/5 mb-[10px] flex justify-center items-center;
+}
+
+.card-image .image-wrapper {
+  @apply absolute inset-0;
+}
+
+.card-image .image-wrapper img {
+  @apply object-cover w-full h-full min-h-full;
+}
+
+.card-image .image-wrapper .action-hidden {
+  @apply opacity-0 absolute z-[1] transition-all duration-[0.08s] ease-[ease-in-out] delay-[0s] inset-0;
+  background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(22, 22, 26, 0.3) 95%);
+}
+
+.card-image .image-wrapper .action-hidden .button-wrapper {
+  @apply absolute -translate-x-2/4 translate-y-2.5 opacity-0 transition-all duration-[0.08s] ease-[ease-in-out] delay-[0s] left-2/4 bottom-4;
+}
+
+.card-text {
+  @apply flex mb-2 mr-0 flex-col md:px-2;
+}
+
+.card-text .by {
+  @apply hidden md:inline-flex flex-row items-center transition-all duration-[0.15s] ease-[ease-in-out] delay-[0s] no-underline text-dark/60 dark:text-light/60 text-ellipsis whitespace-nowrap overflow-hidden max-w-full text-xs leading-[15px] font-medium;
+}
+
+.card-text .by span {
+  @apply mr-2 mb-0;
+}
+
+.card-text .name {
+  @apply text-ellipsis whitespace-nowrap overflow-hidden max-w-full text-base leading-[22px] font-medium;
+}
+
+.card-price {
+  @apply hidden md:flex justify-center h-[60px] px-3 py-2 rounded-[10px] bg-dark/5 dark:bg-light/5;
+}
+
+.card-price > div {
+  @apply w-1/2 flex flex-col;
+}
+
+.card-price .status .title,
+.card-price .value .title {
+  @apply mr-0 mb-0.5 text-dark/60 dark:text-light/60 text-ellipsis whitespace-nowrap overflow-hidden max-w-full text-[13px] leading-5 font-medium;
+}
+
+.card-price .status .text span,
+.card-price .value .text {
+  @apply text-ellipsis whitespace-nowrap overflow-hidden max-w-full text-[13px] leading-5 font-medium;
+}

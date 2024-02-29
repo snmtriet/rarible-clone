@@ -1,0 +1,39 @@
+.trending-filter {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'blockchain'
+    'periods'
+    'floor';
+  grid-column-gap: 24px;
+  grid-row-gap: 16px;
+}
+
+.trending-periods {
+  grid-area: periods;
+}
+
+.trending-blockchain {
+  grid-area: blockchain;
+}
+
+.trending-floor {
+  grid-area: floor;
+}
+
+@media (min-width: 638px) {
+  .trending-filter {
+    grid-template-columns: minmax(min-content, 1fr) 1fr;
+    grid-template-areas:
+      'periods blockchain'
+      'floor .';
+  }
+}
+
+@media (min-width: 966px) {
+  .trending-filter {
+    grid-template-columns: min-content min-content min-content 1fr;
+    grid-template-areas: 'periods blockchain floor .';
+  }
+}

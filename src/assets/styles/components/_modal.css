@@ -1,0 +1,84 @@
+.modal {
+  @apply fixed top-0 left-0 z-[100] block w-full h-full overflow-hidden outline-none;
+}
+
+body.modal-open {
+  @apply overflow-hidden;
+}
+
+.modal-dialog {
+  @apply relative w-auto mx-2 pointer-events-none xs:max-w-[500px] xs:my-7 xs:mx-auto lg:max-w-[800px];
+}
+
+.modal.fade .modal-dialog {
+  @apply transition-transform duration-300 ease-out translate-x-0 -translate-y-[50px];
+}
+
+.modal-dialog-centered {
+  @apply flex items-center min-h-[calc(100%-1rem)];
+}
+
+.modal-content {
+  @apply relative flex flex-col w-full pointer-events-auto bg-light bg-clip-padding border border-[#1e2c43] rounded-lg outline-none p-4;
+}
+
+.modal-backdrop {
+  @apply fixed top-0 left-0 z-50 w-[100vw] h-[100vh] bg-black/90;
+}
+
+.modal-backdrop.fade {
+  @apply opacity-0;
+}
+
+.modal-backdrop.show {
+  @apply opacity-40;
+}
+
+.modal-dialog .modal-content .modal-close {
+  @apply absolute top-2 right-2 text-2xl flex items-center justify-center cursor-pointer;
+}
+
+.modal-enter {
+  opacity: 0;
+  transform: translateY(100px);
+  display: block;
+}
+.modal-enter-active {
+  opacity: 1;
+  display: block;
+  transform: translateY(0px);
+  transition: opacity 0.4s, transform 0.4s;
+}
+.modal-exit {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.modal-exit-active {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.4s, transform 0.4s;
+}
+
+.modal-backdrop-enter,
+.overlay-enter {
+  opacity: 0;
+}
+.modal-backdrop-enter-active,
+.overlay-enter-active {
+  opacity: 0.5;
+  transition: opacity 0.4s;
+}
+.modal-backdrop-exit,
+.overlay-exit {
+  opacity: 0.5;
+}
+.modal-backdrop-exit-active,
+.overlay-exit-active {
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.modal-backdrop-enter-done,
+.overlay-enter-done {
+  opacity: 0.5;
+  transition: opacity 0.4s;
+}

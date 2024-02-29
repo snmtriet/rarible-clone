@@ -1,0 +1,57 @@
+.banner-card {
+  @apply flex flex-col w-full min-w-full;
+}
+
+.banner-card .banner-inner {
+  @apply relative p-6 flex justify-center text-light bg-light/5 rounded-2xl w-full transition-all duration-150 ease-in-out md:px-8 md:py-16;
+}
+
+.banner-card .banner-inner > * {
+  @apply flex flex-grow;
+}
+
+.banner-inner .banner-background {
+  @apply absolute z-[-1] overflow-hidden rounded-xl inset-0;
+}
+
+.banner-inner .banner-background img {
+  @apply object-cover w-full h-full opacity-100 relative max-h-full max-w-full bg-[rgba(0,0,0,0)] transition-opacity duration-[0.33s] ease-[ease-in-out] delay-[0s];
+  vertical-align: inherit;
+}
+
+.banner-inner .banner-content {
+  @apply flex items-center flex-col max-w-[1080px] lg-m:flex-row md:flex-row;
+}
+
+.banner-content .banner-image {
+  @apply relative w-full pt-[100%] mb-8 flex-shrink-0 lg-m:mr-16 lg-m:mb-0 lg-m:w-[480px] lg-m:h-[480px] md:mr-10 md:mb-0 md:pt-0 md:w-[340px] md:h-[340px];
+}
+
+.banner-image .banner-link {
+  @apply absolute inset-0;
+}
+
+.banner-link img {
+  @apply w-full h-full rounded-xl object-cover max-h-full max-w-full transition-opacity duration-[0.33s] ease-[ease-in-out] delay-[0s];
+}
+
+.banner-content .banner-text {
+  @apply flex-auto max-w-full min-h-0 min-w-0 flex-col flex items-stretch text-center md:text-left flex-col;
+}
+
+.banner-text h1 {
+  @apply mb-4 mr-0 text-[40px] leading-[46px] font-bold lg-m:mb-6 lg-m:mr-0;
+}
+
+.banner-text p {
+  @apply text-light/85 font-medium leading-[22px] text-[15px] mb-4 lg-m:mb-6 lg-m:mr-0;
+}
+
+.banner-text p span {
+  @apply whitespace-pre-wrap break-words;
+  hyphens: auto;
+}
+
+.banner-text p pre {
+  @apply inline;
+}

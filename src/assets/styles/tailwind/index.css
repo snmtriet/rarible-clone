@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-dark dark:text-light text-sm bg-light dark:bg-dark leading-normal font-poppins  duration-200 ease-linear;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  .h1 {
+    @apply text-4xl font-bold;
+  }
+
+  h2,
+  .h2 {
+    @apply text-3xl font-bold;
+  }
+
+  h3,
+  .h3 {
+    @apply text-2xl font-semibold;
+  }
+
+  h4,
+  .h4 {
+    @apply text-xl font-semibold;
+  }
+
+  h5,
+  .h5 {
+    @apply text-lg font-semibold;
+  }
+
+  h6,
+  .h6 {
+    @apply text-base font-semibold;
+  }
+
+  hr {
+    @apply border-gray-200 dark:border-gray-600;
+  }
+}

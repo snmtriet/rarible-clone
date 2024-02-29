@@ -1,0 +1,15 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.input-wrapper {
+  @apply relative bg-dark/5 dark:bg-light/5 border border-transparent px-3 py-[6px] rounded-xl text-sm cursor-text flex items-center justify-between flex-grow basis-auto flex-shrink-0 max-w-full min-h-10 transition-all !duration-300 ease-in-out hover:!border-dark/20 focus-within:!bg-transparent [&:focus-within:not(:focus)]:!border-dark/40 dark:[&:focus-within:not(:focus)]:!border-light/40;
+}

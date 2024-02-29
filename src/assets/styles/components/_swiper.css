@@ -1,0 +1,86 @@
+.swiper-button-next,
+.swiper-button-prev {
+  @apply after:!content-none bg-btn-light dark:bg-btn-dark !w-10 !h-10 rounded-full border border-dark/5 shadow-lg;
+}
+
+.swiper-button-next {
+  @apply !-right-2;
+}
+.swiper-button-prev {
+  @apply !-left-2;
+}
+
+.swiper-button-next svg,
+.swiper-button-prev svg {
+  @apply !w-6 !h-6 text-dark;
+}
+
+.swiper-button-next svg {
+  @apply -rotate-90;
+}
+
+.swiper-button-prev svg {
+  @apply rotate-90;
+}
+
+.swiper-button-disabled {
+  @apply !hidden;
+}
+
+.swiper-pagination-bullet {
+  @apply !h-1 !rounded !w-12 !bg-dark/[0.4] hover:bg-dark/[0.6] dark:!bg-light/[0.4] hover:scale-105 dark:hover:bg-light/[0.6] hover:opacity-100 transition-all duration-[0.15s] ease-[ease-in-out] delay-[0s];
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  @apply dark:!bg-light/[0.6] !bg-dark/[0.6];
+}
+
+.swiper-trending:hover .swiper-nav-trending {
+  opacity: 1;
+}
+
+.swiper-trending:hover .swiper-nav-trending .swiper-button-next::before {
+  content: '';
+  position: absolute;
+  width: 55px;
+  height: 120px;
+  right: -17px;
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: 0px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+}
+
+.dark .swiper-trending:hover .swiper-nav-trending .swiper-button-next::before {
+  background: linear-gradient(90deg, rgba(25, 28, 31, 0) 0%, #16161a 100%);
+}
+
+.swiper-trending:hover .swiper-nav-trending .swiper-button-prev::before {
+  content: '';
+  position: absolute;
+  width: 55px;
+  height: 120px;
+  left: -17px;
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: 0px;
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+}
+
+.dark .swiper-trending:hover .swiper-nav-trending .swiper-button-prev::before {
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #16161a 100%);
+}
+
+.swiper-button-next.trending-next {
+  right: 0.5rem !important;
+}
+.swiper-button-prev.trending-prev {
+  left: 0.5rem !important;
+}
+
+@media (max-width: 767px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+}

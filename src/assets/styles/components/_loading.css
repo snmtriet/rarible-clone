@@ -1,0 +1,11 @@
+.loading-center {
+  @apply fixed inset-0 flex justify-center items-center flex-1 flex-col;
+}
+
+.gif-loading {
+  @apply w-12 object-cover;
+}
+
+.loading-default {
+  @apply flex justify-center items-center h-full;
+}

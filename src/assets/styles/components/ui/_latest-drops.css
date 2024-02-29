@@ -1,0 +1,11 @@
+.ld-container {
+  @apply md:border md:px-8 py-6 rounded-2xl border-solid border-dark/10 dark:border-light/10;
+}
+
+.ld-container .ld-title {
+  @apply mr-0 mb-6 flex pb-2 border-b border-b-dark/10 dark:border-b-light/10 md:flex-row md:items-center;
+}
+
+.ld-container .ld-title h2 {
+  @apply text-[28px] leading-8 font-medium mr-6 mb-0;
+}
