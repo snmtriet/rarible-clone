@@ -12,7 +12,9 @@ const MainLayout = () => {
           <Views />
         </main>
       </div>
-      <Footer />
+      <div className="w-full">
+        <Footer />
+      </div>
     </>
   )
 }

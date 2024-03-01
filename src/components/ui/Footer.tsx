@@ -4,7 +4,7 @@ import { IconArrowRight2 } from '@/assets/svg'
 
 const Footer = () => {
   return (
-    <div className="footer w-full max-w-[1920px] mx-auto xs:px-6 md:px-7 lg-m:px-8">
+    <div className="footer container w-full max-w-[1920px] mx-auto xs:px-6 md:px-7 lg-m:px-8">
       <div className="flex flex-col">
         <div className="mb-6 footer-top min-[1080px]:px-4 min-[1080px]:py-16 min-[1080px]:gap-x-[84px]">
           <div className="foot-subscribe">
